@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul.mainmenu {
+    list-style-type: none;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    background: #3F4137;
+    color: #fdc073;
+    font-size: 20px;
+    overflow: hidden;
+}
+ul.mainmenu li {
+    float: left;
+    margin: 18px 40px 0 50px;
+}
+ul.mainmenu li.last {float: right;}
+ul.mainmenu li a {
+    color: #fdc073;
+    text-decoration: none;
+}
+ul.mainmenu li a:hover {
+    color: #FDA83D;
+}
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+li.last {
+    margin-right: 0;
+}
+
+div.content {margin: 10px;}
+
+.form-contact label {
+    display: inline-block;
+    min-width: 80px;
+}
+.form-contact p {margin: 10px 0 10px 0;}
+.form-contact input[type=submit], textarea {font-size: 16px;}
+
+.flash {padding: 10px;}
+.flash.success {
+    border: 1px solid #21DB56;
+    background: #AEFFC5;
+}
+.flash.error {
+    border: 1px solid #FF4343;
+    background: #FF9C9C;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.clear {clear: both;}
