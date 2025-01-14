@@ -79,6 +79,23 @@ def feedback():
     return render_template('feedback.html', title='Feedback', menu=[])
 
 
+@app.route('/add_post', methods=['GET', 'POST'])
+def add_post():
+    db = get_db()
+    dbase = FDataBase(db)
+    if request.method == 'POST':
+        if len(request.form['name']) > 4 and len(request.form['post']) > 10:
+            res = dbase.add_Post(request.form['name'], request.form['post'])
+            if not res:
+                flash('Message has not been posted', category='error')
+            else:
+                flash('Message has been posted', category='success')
+        else:
+            flash('Message has not been posted', category='error')
+
+    return render_template('add_post.html', title='Add the post', menu=dbase.get_menu())
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('response_404.html', title='Page was not found', menu=[]), 404
