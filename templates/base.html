@@ -3,7 +3,6 @@
 <head>
 <link type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
     {% block title %}
-    <meta charset="UTF-8">
     <title>{{ title }}</title>
     {% endblock %}
 </head>
@@ -12,7 +11,7 @@
         {% block mainmenu %}
             <ul class="mainmenu">
                 {% for i in menu %}
-                    <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+                    <li><a href="{{ i.url }}">{{ i.title }}</a></li>
                 {% endfor %}
             </ul>
         {% endblock mainmenu %}
